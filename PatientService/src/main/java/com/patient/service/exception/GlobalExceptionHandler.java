@@ -26,16 +26,13 @@ public class GlobalExceptionHandler {
 
     }
 
-    @ExceptionHandler(DataIntegrityViolationException.class)
-    public ResponseEntity<Map<String, String>> handleDataIntegrityViolation(DataIntegrityViolationException ex) {
-        Map<String, String> errorResponse = new HashMap<>();
+    @ExceptionHandler(EmailAlreadyExistsException.class)
+    public ResponseEntity<Map<String, String>> handleDuplicateEmail(EmailAlreadyExistsException ex){
 
-        // You can inspect ex.getMessage() if you need to determine exactly which constraint failed,
-        // but since email is likely your primary unique constraint, we can format a clean message:
-        errorResponse.put("error", "Conflict");
-        errorResponse.put("message", "The email address provided is already registered.");
+        Map<String, String> errors = new HashMap<>();
 
-        // Returning 409 Conflict is standard practice for duplicate resource errors
-        return ResponseEntity.status(HttpStatus.CONFLICT).body(errorResponse);
+        errors.put("message", "Email address already exists");
+
+        return ResponseEntity.badRequest().body(errors);
     }
 }
