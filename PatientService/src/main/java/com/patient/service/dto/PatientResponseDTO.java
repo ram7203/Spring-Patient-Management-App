@@ -13,9 +13,9 @@ import java.util.UUID;
 @Builder
 public class PatientResponseDTO {
 
-    private String Id;
+    private String id;
 
-    private String Name;
+    private String name;
 
     private String email;
 

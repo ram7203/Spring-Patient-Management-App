@@ -18,10 +18,10 @@ public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private UUID Id;
+    private UUID id;
 
     @NotNull
-    private String Name;
+    private String name;
 
     @NotNull
     @Email
