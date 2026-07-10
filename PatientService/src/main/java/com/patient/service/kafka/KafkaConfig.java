@@ -1,4 +1,4 @@
-package com.patient.service.config;
+package com.patient.service.kafka;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.ByteArraySerializer;
