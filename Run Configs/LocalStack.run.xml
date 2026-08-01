@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="LocalStack" type="Application" factoryName="Application" activateToolWindowBeforeRun="false">
+    <option name="MAIN_CLASS_NAME" value="com.example.stack.LocalStack" />
+    <module name="Infrastructure" />
+    <shortenClasspath name="ARGS_FILE" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Infrastructure" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
